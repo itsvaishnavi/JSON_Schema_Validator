@@ -22,13 +22,13 @@ class SchemaDefinition():
 	        "user_id": { "$ref": "#/definitions/non-empty-string" },
 	        "context_device_token": { "$ref": "#/definitions/non-empty-string" },
 	        "received_at": {"type": "string",
-	            "format": "date"},
+	            "format": "date-time"},
 	        "original_timestamp": {"type": "string",
-	            "format": "date"},
+	            "format": "date-time"},
 	        "sent_at": {"type": "string",
-	            "format": "date"},
+	            "format": "date-time"},
 	        "timestamp": {"type": "string",
-	            "format": "date"},
+	            "format": "date-time"},
 	        "context_network_wifi" : {"type": 'boolean'}
 	    },
 	    "definitions": {

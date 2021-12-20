@@ -67,6 +67,8 @@ class Validation_And_Monitoring():
 		"""
 		with open(self.path_parent+SchemaDefinition().output_json_log_folder_path+fileName+'_log_file.json','w') as f_output:
 			json.dump(self.log,f_output)
+
+		print("Error log data at location::",self.path_parent+SchemaDefinition().output_json_log_folder_path+fileName+'_log_file.json','w')
 	
 	@profile	
 	def generateReport(self,fileName:str):
@@ -84,7 +86,7 @@ class Validation_And_Monitoring():
 
 		# Converting out_dataframe to csv
 		out_dataframe.to_csv(self.path_parent+SchemaDefinition().csv_generated_report_folder_path+fileName+'_Generated_report.csv')
-
+		print("CSV Report File At location::",self.path_parent+SchemaDefinition().csv_generated_report_folder_path+fileName+'_Generated_report.csv')
 		return out_dataframe.to_dict('records')
 
 def main():
